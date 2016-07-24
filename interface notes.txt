@@ -1,0 +1,24 @@
+setConnectionCallback(callback) - sets it up so callback gets called with connected/disconnected info
+isConnected - returns true or false
+setPulseDataReceivedCallback(callback)
+setPatientData(patientLastName, patientId, patientBirthday)
+measurementStart(side, limb, patientLastName, patientId, patientBirthDate, callback) - needs ability to return error either at beginning or at any point in time - the callback can respond with started, not adjusting, stopped successful, stopped error, stopped cancelled
+measurementCancel
+resultsCalculate - calculates and returns left and right side results; adjusts uses/positives as appropriate
+
+getSensorProductId
+getSensorSerialNumber
+getSensorProductVersion
+
+getUses
+getPositives
+getGraceUses
+
+syncNow
+syncSensorCodeGet
+syncUpdateCodeEnter
+lastSyncTimeGet
+syncFreqGet
+customerIdGet
+paymentStatusGet
+

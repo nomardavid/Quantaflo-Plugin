@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.semlerscientific.plugin.QuantaFloSensorPlugin"
+    version="1.0.3"><!-- make sure to update Version in SSSensorPluginDetails.java when you update this -->
+
+  <name>QuantaFloSensorPlugin</name>
+
+  <description>
+    QuantaFlo Sensor Plugin
+  </description>
+
+  <asset src="www/QuantaFloSensorPlugin.js" target="plugins/QuantaFloSensorPlugin.js" />
+
+  <engines>
+    <engine name="cordova" version=">=2.7.0" />
+  </engines>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="plugins">
+      <feature name="QuantaFloSensorPlugin">
+        <param name="package" value="com.semlerscientific.plugin.QuantaFloSensorPlugin" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/com/semlerscientific/plugin/QuantaFloSensorPlugin.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSA3NDK.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSA3NDKEtaOutput.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSA3NDKTerms.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSLicenseCodes.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSLogger.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSMeasurement.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSSensorMessage.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSSensorPluginDetails.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSSensorRunnable.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSSensorService.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSTest.java" target-dir="src/com/semlerscientific/plugin" />
+    <source-file src="src/android/com/semlerscientific/plugin/SSWebService.java" target-dir="src/com/semlerscientific/plugin" />
+  </platform>
+</plugin>
